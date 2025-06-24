@@ -86,12 +86,8 @@ class LogisticRegressionScratch:
         """
         # TODO: Implement sigmoid function
         # Hint: Use np.exp() and handle overflow with np.clip()
+        return 1 / (1 + np.exp(-z))
         
-        # SOLUTION (uncomment to see):
-        # z = np.clip(z, -500, 500)  # Prevent overflow
-        # return 1 / (1 + np.exp(-z))
-        
-        pass
     
     def cost_function(self, y_true, y_pred):
         """
