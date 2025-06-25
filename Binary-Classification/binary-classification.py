@@ -104,11 +104,11 @@ class LogisticRegressionScratch:
         # Hint: Use np.log() and add small epsilon to prevent log(0)
         
         # SOLUTION (uncomment to see):
-        # m = len(y_true)
-        # epsilon = 1e-15  # Prevent log(0)
-        # y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
-        # cost = -1/m * np.sum(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
-        # return cost
+        m = len(y_true)
+        epsilon = 1e-15  # Prevent log(0)
+        y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
+        cost = -1/m * np.sum(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
+        return cost
         
         pass
     
