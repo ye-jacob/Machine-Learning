@@ -163,9 +163,9 @@ class LogisticRegressionScratch:
         # TODO: Implement prediction
         
         # SOLUTION (uncomment to see):
-        # z = X @ self.weights + self.bias
-        # probabilities = self.sigmoid(z)
-        # return (probabilities >= 0.5).astype(int)
+        z = X @ self.weights + self.bias
+        probabilities = self.sigmoid(z)
+        return (probabilities >= 0.5).astype(int)
         
         pass
     
